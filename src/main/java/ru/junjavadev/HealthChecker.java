@@ -8,7 +8,8 @@ import java.util.stream.Collectors;
 class HealthChecker {
 
     public static boolean checkPulseMeasurements(List<Integer> pulseMeasurements) {
-        return true; // write your code here
+        return pulseMeasurements.stream()
+                .allMatch(pulse -> pulse >= 90 && pulse <= 150);
     }
 
     public static void main(String[] args) {
