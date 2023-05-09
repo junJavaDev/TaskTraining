@@ -1,4 +1,4 @@
-package ru.jvst;
+package ru.jvst.stepik.functionalprogramming;
 
 public class Main {
     public static void main(String[] args) {

@@ -20,7 +20,7 @@ package ru.jvst.leetcode;
  * <pre>
  * Constraints:
  * 1 <= s.length <= 105
- * s consists of lowercase English letters.
+ * s consists of lowercase English letters.zz
  * 1 <= k <= s.length</pre></blockquote>
  **/
 

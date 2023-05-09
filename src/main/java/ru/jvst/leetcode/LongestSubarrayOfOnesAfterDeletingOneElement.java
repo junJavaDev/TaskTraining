@@ -25,7 +25,7 @@ package ru.jvst.leetcode;
  *     nums[i] is either 0 or 1.</pre></blockquote>
  **/
 
-class Solution {
+class LongestSubarrayOfOnesAfterDeletingOneElement {
     public int longestSubarray(int[] nums) {
         int left = 0;
         int right = 0;

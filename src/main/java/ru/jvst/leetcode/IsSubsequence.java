@@ -29,7 +29,6 @@ class IsSubsequence {
                 if (sI == s.length() - 1) return true;
                 sI++;
             }
-
         }
         return false;
     }

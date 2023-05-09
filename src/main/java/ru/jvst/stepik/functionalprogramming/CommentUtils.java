@@ -1,4 +1,4 @@
-package ru.jvst;
+package ru.jvst.stepik.functionalprogramming;
 
 import java.text.ParseException;
 import java.text.SimpleDateFormat;

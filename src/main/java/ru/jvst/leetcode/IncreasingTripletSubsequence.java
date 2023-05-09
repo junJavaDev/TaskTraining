@@ -1,28 +1,41 @@
 package ru.jvst.leetcode;
 
 /**
- * <a href="https://leetcode.com/problems/increasing-triplet-subsequence/">334. Increasing Triplet Subsequence</a>
- * <p> Given an integer array nums, return true if there exists a triple of indices (i, j, k) such that i < j < k and nums[i] < nums[j] < nums[k]. If no such indices exists, return false.
- *
- * <blockquote><pre>
- * Example 1:
- * Input: nums = [1,2,3,4,5]
- * Output: true
- * Explanation: Any triplet where i < j < k is valid.</pre>
- * <pre>
- * Example 2:
- * Input: nums = [5,4,3,2,1]
- * Output: false
- * Explanation: No triplet exists.</pre>
- * <pre>
- * Input: nums = [2,1,5,0,4,6]
- * Output: true
- * Explanation: The triplet (3, 4, 5) is valid because nums[3] == 0 < nums[4] == 4 < nums[5] == 6.</pre>
- * <pre>
- * Constraints:
- * 1 <= nums.length <= 5 * 105
- * -231 <= nums[i] <= 231 - 1</pre></blockquote>
- * <p> Follow up: Could you implement a solution that runs in O(n) time complexity and O(1) space complexity?
+ <a href="https://leetcode.com/problems/increasing-triplet-subsequence/">334. Increasing Triplet Subsequence</a>
+ <div class="xFUwe" data-track-load="description_content"><p>Given an integer array <code>nums</code>, return <code>true</code><em> if there exists a triple of indices </em><code>(i, j, k)</code><em> such that </em><code>i &lt; j &lt; k</code><em> and </em><code>nums[i] &lt; nums[j] &lt; nums[k]</code>. If no such indices exists, return <code>false</code>.</p>
+
+ <p>&nbsp;</p>
+ <p><strong class="example">Example 1:</strong></p>
+
+ <pre><strong>Input:</strong> nums = [1,2,3,4,5]
+ <strong>Output:</strong> true
+ <strong>Explanation:</strong> Any triplet where i &lt; j &lt; k is valid.
+ </pre>
+
+ <p><strong class="example">Example 2:</strong></p>
+
+ <pre><strong>Input:</strong> nums = [5,4,3,2,1]
+ <strong>Output:</strong> false
+ <strong>Explanation:</strong> No triplet exists.
+ </pre>
+
+ <p><strong class="example">Example 3:</strong></p>
+
+ <pre><strong>Input:</strong> nums = [2,1,5,0,4,6]
+ <strong>Output:</strong> true
+ <strong>Explanation:</strong> The triplet (3, 4, 5) is valid because nums[3] == 0 &lt; nums[4] == 4 &lt; nums[5] == 6.
+ </pre>
+
+ <p>&nbsp;</p>
+ <p><strong>Constraints:</strong></p>
+
+ <ul>
+ <li><code>1 &lt;= nums.length &lt;= 5 * 10<sup>5</sup></code></li>
+ <li><code>-2<sup>31</sup> &lt;= nums[i] &lt;= 2<sup>31</sup> - 1</code></li>
+ </ul>
+
+ <p>&nbsp;</p>
+ <strong>Follow up:</strong> Could you implement a solution that runs in <code>O(n)</code> time complexity and <code>O(1)</code> space complexity?</div>
  **/
 
 class IncreasingTripletSubsequence {

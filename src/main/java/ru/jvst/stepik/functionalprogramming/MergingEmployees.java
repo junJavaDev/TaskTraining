@@ -1,4 +1,4 @@
-package ru.jvst;
+package ru.jvst.stepik.functionalprogramming;
 
 import java.util.Arrays;
 import java.util.List;

@@ -1,7 +1,7 @@
 package ru.jvst.leetcode;
 
 /**
- * <a href="https://leetcode.com/problems/find-pivot-index/">724. Find Pivot Index</a>
+ <a href="https://leetcode.com/problems/find-pivot-index/">724. Find Pivot Index</a>
  <div class="xFUwe" data-track-load="description_content"><p>Given an array of integers <code>nums</code>, calculate the <strong>pivot index</strong> of this array.</p>
 
  <p>The <strong>pivot index</strong> is the index where the sum of all the numbers <strong>strictly</strong> to the left of the index is equal to the sum of all the numbers <strong>strictly</strong> to the index's right.</p>
