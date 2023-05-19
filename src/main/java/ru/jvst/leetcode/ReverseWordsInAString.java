@@ -2,31 +2,26 @@ package ru.jvst.leetcode;
 
 /**
  <a href="https://leetcode.com/problems/reverse-vowels-of-a-string/">345. Reverse Vowels of a String</a>
- <p> Given an input string s, reverse the order of the words.
- <p> A word is defined as a sequence of non-space characters. The words in s will be separated by at least one space.
- <p> Return a string of the words in reverse order concatenated by a single space.
- <p> Note that s may contain leading or trailing spaces or multiple spaces between two words. The returned string should only have a single space separating the words. Do not include any extra spaces.
- <blockquote><pre>
- Example 1:
- Input: s = "the sky is blue"
- Output: "blue is sky the"</pre>
- <pre>
- Example 2:
- Input: s = "  hello world  "
- Output: "world hello"
- Explanation: Your reversed string should not contain leading or trailing spaces.</pre>
- <pre>
- Example 3:
- Input: s = "a good   example"
- Output: "example good a"
- Explanation: You need to reduce multiple spaces between two words to a single space in the reversed string.</pre>
- <pre>
- Constraints:
- 1 <= s.length <= 104
- s contains English letters (upper-case and lower-case), digits, and spaces ' '.
- There is at least one word in s.</pre></blockquote>
+ <div class="xFUwe" data-track-load="description_content"><p>Given a string <code>s</code>, reverse only all the vowels in the string and return it.</p>
 
- <p> Follow-up: If the string data type is mutable in your language, can you solve it in-place with O(1) extra space?
+ <p>The vowels are <code>'a'</code>, <code>'e'</code>, <code>'i'</code>, <code>'o'</code>, and <code>'u'</code>, and they can appear in both lower and upper cases, more than once.</p>
+
+ <p>&nbsp;</p>
+ <p><strong class="example">Example 1:</strong></p>
+ <pre><strong>Input:</strong> s = "hello"
+ <strong>Output:</strong> "holle"
+ </pre><p><strong class="example">Example 2:</strong></p>
+ <pre><strong>Input:</strong> s = "leetcode"
+ <strong>Output:</strong> "leotcede"
+ </pre>
+ <p>&nbsp;</p>
+ <p><strong>Constraints:</strong></p>
+
+ <ul>
+ <li><code>1 &lt;= s.length &lt;= 3 * 10<sup>5</sup></code></li>
+ <li><code>s</code> consist of <strong>printable ASCII</strong> characters.</li>
+ </ul>
+ </div>
  **/
 
 public class ReverseWordsInAString {
