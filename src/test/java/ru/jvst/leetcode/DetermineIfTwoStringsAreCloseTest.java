@@ -13,17 +13,14 @@ public class DetermineIfTwoStringsAreCloseTest {
 
     @Test
     void testAbcBsaCloseStrings() {
-        DetermineIfTwoStringsAreClose checker = new DetermineIfTwoStringsAreClose();
         assertTrue(checker.closeStrings("abc", "bca"));
     }
     @Test
     void testAAaCloseStrings() {
-        DetermineIfTwoStringsAreClose checker = new DetermineIfTwoStringsAreClose();
         assertFalse(checker.closeStrings("a", "aa"));
     }
     @Test
     void testCabbbaAbbcccCloseStrings() {
-        DetermineIfTwoStringsAreClose checker = new DetermineIfTwoStringsAreClose();
         assertTrue(checker.closeStrings("cabbba", "abbccc"));
     }
 }
