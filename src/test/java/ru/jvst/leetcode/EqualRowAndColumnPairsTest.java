@@ -1,14 +1,15 @@
 package ru.jvst.leetcode;
 
 import org.junit.jupiter.api.BeforeAll;
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
 
 class EqualRowAndColumnPairsTest {
-    static EqualRowAndColumnPairs checker;
-    @BeforeAll
-    static void setup() {
+    EqualRowAndColumnPairs checker;
+    @BeforeEach
+    void setup() {
         checker = new EqualRowAndColumnPairs();
     }
     @Test

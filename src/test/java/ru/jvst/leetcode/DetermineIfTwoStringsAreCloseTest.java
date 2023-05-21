@@ -1,13 +1,14 @@
 package ru.jvst.leetcode;
 import org.junit.jupiter.api.BeforeAll;
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
 
 public class DetermineIfTwoStringsAreCloseTest {
-    static DetermineIfTwoStringsAreClose checker;
-    @BeforeAll
-    static void setup() {
+    DetermineIfTwoStringsAreClose checker;
+    @BeforeEach
+    void setup() {
         checker = new DetermineIfTwoStringsAreClose();
     }
 

@@ -1,16 +1,17 @@
 package ru.jvst.leetcode;
 
 import org.junit.jupiter.api.BeforeAll;
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
 
 class DecodeStringTest {
 
-    static DecodeString checker;
+    DecodeString checker;
 
-    @BeforeAll
-    static void setUp() {
+    @BeforeEach
+    void setUp() {
         checker = new DecodeString();
     }
 
