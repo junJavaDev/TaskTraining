@@ -16,5 +16,7 @@ class AsteroidCollisionTest {
     @Test
     void asteroidCollision() {
         assertArrayEquals(new int[]{5,10}, checker.asteroidCollision(new int[]{5,10,-5}));
+        assertArrayEquals(new int[]{}, checker.asteroidCollision(new int[]{8,-8}));
+        assertArrayEquals(new int[]{10}, checker.asteroidCollision(new int[]{10,2,-5}));
     }
 }
