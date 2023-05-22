@@ -77,7 +77,7 @@ class Dota2Senate {
 		else return vote(senators, voiceBalance);
 	}
 
-	Queue Solution
+	//Queue Solution
 //	public String predictPartyVictory(String senate) {
 //		Queue<Integer> r = new LinkedList<>();
 //		Queue<Integer> d = new LinkedList<>();
