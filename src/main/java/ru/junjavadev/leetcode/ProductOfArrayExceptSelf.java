@@ -22,7 +22,7 @@ The product of any prefix or suffix of nums is guaranteed to fit in a 32-bit int
 Follow up: Can you solve the problem in O(1) extra space complexity? (The output array does not count as extra space for space complexity analysis.)
  **/
 
-
+///********** Short ***************/
 class ProductOfArrayExceptSelf {
     public int[] productExceptSelf(int[] nums) {
         int[] result = new int[nums.length];
@@ -30,11 +30,38 @@ class ProductOfArrayExceptSelf {
         for (int i = 1; i < nums.length; i++) {
             result[i] = result[i - 1] * nums[i - 1];
         }
-        int temp = 1;
-        for (int i = nums.length - 2; i >= 0; i--) {
-            temp *= nums[i+1];
-            result[i] *= temp;
+        for (int i = nums.length - 2, suffix = 1; i >= 0; i--) {
+            suffix *= nums[i+1];
+            result[i] *= suffix;
         }
         return result;
     }
 }
+
+///********** Optimized ***************/
+//class ProductOfArrayExceptSelf {
+//    public static void main(String[] args) {
+//        ProductOfArrayExceptSelf poars = new ProductOfArrayExceptSelf();
+//        System.out.println(Arrays.toString(poars.productExceptSelf(new int[]{9, 0, -2})));
+//    }
+//    public int[] productExceptSelf(int[] nums) {
+//        int[] result = new int[nums.length];
+//        result[0] = 1;
+//        for (int i = 1; i < nums.length; i++) {
+//            int num = nums[i - 1];
+//            if (num == 0) {
+//                Arrays.fill(result, 0, i-1, 0);
+//                for (int j = i; j < nums.length; j++) {
+//                    result [i - 1] *= nums[j];
+//                }
+//                return result;
+//            }
+//            result[i] = result[i - 1] * num;
+//        }
+//        for (int i = nums.length - 2, suffix = 1; i >= 0; i--) {
+//            suffix *= nums[i+1];
+//            result[i] *= suffix;
+//        }
+//        return result;
+//    }
+//}

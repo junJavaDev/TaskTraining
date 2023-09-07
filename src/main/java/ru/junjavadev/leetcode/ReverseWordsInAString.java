@@ -29,7 +29,6 @@ package ru.junjavadev.leetcode;
  <p> Follow-up: If the string data type is mutable in your language, can you solve it in-place with O(1) extra space?
  **/
 
-
 public class ReverseWordsInAString {
     public String reverseWords(String s) {
         String[] words = s.split("\\s+");
