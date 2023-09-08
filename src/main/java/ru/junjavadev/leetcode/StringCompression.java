@@ -1,7 +1,5 @@
 package ru.junjavadev.leetcode;
 
-import java.util.Arrays;
-
 /**
  <a href="https://leetcode.com/problems/string-compression/">443. String Compression</a>
  <p> Given an array of characters chars, compress it using the following algorithm:
