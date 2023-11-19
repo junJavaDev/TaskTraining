@@ -4,8 +4,7 @@ import java.util.ArrayDeque;
 import java.util.Queue;
 
 /**
- * <a href="https://leetcode.com/problems/longest-subarray-of-1s-after-deleting-one-element/">1493. Longest Subarray of 1's After Deleting One Element
- * </a>
+ * <a href="https://leetcode.com/problems/longest-subarray-of-1s-after-deleting-one-element/">1493. Longest Subarray of 1's After Deleting One Element</a>
  * <p> Given a binary array nums, you should delete one element from it.
  * <p> Return the size of the longest non-empty subarray containing only 1's in the resulting array. Return 0 if there is no such subarray.</p>
  * <blockquote><pre>
@@ -30,19 +29,19 @@ import java.util.Queue;
  **/
 
 class Solution {
-//    public int longestSubarray(int[] nums) {
-//        int left = 0;
-//        int right = 0;
-//        int lastZeroIdx = -1;
-//        int result = 0;
-//        while (right < nums.length) {
-//            if (nums[right] == 0) {
-//                left = lastZeroIdx + 1;
-//                lastZeroIdx = right;
-//            }
-//            result = Math.max(result, right - left);
-//            right++;
-//        }
-//        return result;
-//    }
+    public int longestSubarray(int[] nums) {
+        int left = 0;
+        int right = 0;
+        int lastZeroIdx = -1;
+        int result = 0;
+        while (right < nums.length) {
+            if (nums[right] == 0) {
+                left = lastZeroIdx + 1;
+                lastZeroIdx = right;
+            }
+            result = Math.max(result, right - left);
+            right++;
+        }
+        return result;
+    }
 }
