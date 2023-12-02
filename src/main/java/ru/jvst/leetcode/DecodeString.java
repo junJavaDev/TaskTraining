@@ -1,5 +1,8 @@
 package ru.jvst.leetcode;
 
+import java.util.ArrayDeque;
+import java.util.Deque;
+
 /**
  * <a href="https://leetcode.com/problems/decode-string/">394. Decode String</a>
  * <div class="xFUwe" data-track-load="description_content"><p>Given an encoded string, return its decoded string.</p>
@@ -42,41 +45,159 @@ package ru.jvst.leetcode;
  **/
 
 class DecodeString {
+//    public String decodeString(String s) {
+//        StringBuilder decoded = new StringBuilder();
+//        int idx = 0;
+//        while (idx < s.length()) {
+//            idx += decodeChar(s, decoded, idx);
+//        }
+//        return decoded.toString();
+//    }
+//
+//    private int decodeChar(String s, StringBuilder decoded, int idx) {
+//        char c = s.charAt(idx);
+//        int offset = 1;
+//        if (Character.isAlphabetic(c)) {
+//            decoded.append(c);
+//        } else if (Character.isDigit(c)) {
+//            offset += multiple(s, decoded, idx);
+//        }
+//        return offset;
+//    }
+//
+//    private int multiple(String s, StringBuilder decoded, int idx) {
+//
+//        int lastNumIdx = idx;
+//        while (s.charAt(lastNumIdx) != '[') lastNumIdx++;
+//        int multiplier = Integer.parseInt(s.substring(idx, lastNumIdx));
+//
+//        int lastI = 0;
+//        while (multiplier > 0) {
+//            lastI = lastNumIdx;
+//            while (s.charAt(lastI) != ']') {
+//                lastI += decodeChar(s, decoded, lastI);
+//            }
+//            multiplier--;
+//        }
+//        return lastI - idx;
+//    }
+
     public String decodeString(String s) {
+        Deque<String> parts = new ArrayDeque<>();
+        Deque<Integer> nums = new ArrayDeque<>();
         StringBuilder decoded = new StringBuilder();
-        int idx = 0;
-        while (idx < s.length()) {
-            idx += decodeChar(s, decoded, idx);
+        StringBuilder recurring = new StringBuilder();
+        int num = 0;
+
+        for (char c : s.toCharArray()) {
+            if (Character.isDigit(c)) {
+                num = num * 10 + (c - '0');
+            } else {
+                switch (c) {
+                    case '[' : {
+                        nums.push(num);
+                        num = 0;
+                        parts.push(decoded.toString());
+                        decoded.setLength(0);
+                        break;
+                    }
+                    case ']' : {
+                        recurring.append(parts.pop());
+                        recurring.append(decoded.toString().repeat(nums.pop()));
+                        decoded.setLength(0);
+                        decoded.append(recurring);
+                        recurring.setLength(0);
+                        break;
+                    }
+                    default:
+                        decoded.append(c);
+                }
+            }
         }
         return decoded.toString();
     }
 
-    private int decodeChar(String s, StringBuilder decoded, int idx) {
-        char c = s.charAt(idx);
-        int offset = 1;
-        if (Character.isAlphabetic(c)) {
-            decoded.append(c);
-        } else if (Character.isDigit(c)) {
-            offset += multiple(s, decoded, idx);
-        }
-        return offset;
-    }
 
-    private int multiple(String s, StringBuilder decoded, int idx) {
 
-        int lastNumIdx = idx;
-        while (s.charAt(lastNumIdx) != '[') lastNumIdx++;
-        int multiplier = Integer.parseInt(s.substring(idx, lastNumIdx));
 
-        int lastI = 0;
-        while (multiplier > 0) {
-            lastI = lastNumIdx;
-            while (s.charAt(lastI) != ']') {
-                lastI += decodeChar(s, decoded, lastI);
-            }
-            multiplier--;
-        }
-        return lastI - idx;
-    }
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//    public String decodeString(String s) {
+//        Deque<Integer> numbers = new ArrayDeque<>();
+//        Deque<String> parts = new ArrayDeque<>();
+//        StringBuilder word = new StringBuilder();
+//
+//        int num = 0;
+//        for (int i = 0; i < s.length(); i++) {
+//            char c = s.charAt(i);
+//            if (Character.isDigit(c)) { // construct a number
+//                num = num * 10 + (c - '0');
+//            } else if (c == '[') {
+//                numbers.push(num);
+//                num = 0;
+//                parts.push(word.toString()); // save previously constructed part to stack
+//                word.setLength(0); // clear the word
+//            } else if (c == ']') {
+//                // take a previous part, and we will append constructed word with repetitions to it
+//                StringBuilder wholePart = new StringBuilder(parts.pop());
+//                int repeat = numbers.pop();
+//                for (int j = 0; j < repeat; j++) {
+//                    wholePart.append(word);
+//                }
+//                word = wholePart;
+//            } else {
+//                word.append(c);
+//            }
+//        }
+//        return word.toString();
+//    }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

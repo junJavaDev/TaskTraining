@@ -16,9 +16,9 @@ class DecodeStringTest {
 
     @Test
     void decodeString() {
-        assertEquals("aaabcbc", checker.decodeString("3[a] 2[bc]"));
+        assertEquals("aaaaaaaaaabcbc", checker.decodeString("10[a]2[bc]"));
         assertEquals("accaccacc", checker.decodeString("3[a2[c]]"));
-        assertEquals("abcabccdcdcdef", checker.decodeString("2[abc]3[cd] ef"));
+        assertEquals("abcabccdcdcdef", checker.decodeString("2[abc]3[cd]ef"));
         assertEquals("leetcodeleetcodeleetcodeleetcodeleetcodeleetcodeleetcodeleetcodeleetcodeleetcodeleetcodeleetcodeleetcodeleetcodeleetcodeleetcodeleetcodeleetcodeleetcodeleetcodeleetcodeleetcodeleetcodeleetcodeleetcodeleetcodeleetcodeleetcodeleetcodeleetcodeleetcodeleetcodeleetcodeleetcodeleetcodeleetcodeleetcodeleetcodeleetcodeleetcodeleetcodeleetcodeleetcodeleetcodeleetcodeleetcodeleetcodeleetcodeleetcodeleetcodeleetcodeleetcodeleetcodeleetcodeleetcodeleetcodeleetcodeleetcodeleetcodeleetcodeleetcodeleetcodeleetcodeleetcodeleetcodeleetcodeleetcodeleetcodeleetcodeleetcodeleetcodeleetcodeleetcodeleetcodeleetcodeleetcodeleetcodeleetcodeleetcodeleetcodeleetcodeleetcodeleetcodeleetcodeleetcodeleetcodeleetcodeleetcodeleetcodeleetcodeleetcodeleetcodeleetcodeleetcodeleetcodeleetcodeleetcodeleetcodeleetcodeleetcode", checker.decodeString("100[leetcode]"));
     }
 }
