@@ -53,7 +53,7 @@ class RecyclableAndLowFatProducts {
     String SQL = """
             SELECT product_id
             FROM Products
-            WHERE low_fats = 'Y'\s
+            WHERE low_fats = 'Y'
             AND recyclable = 'Y';
             """;
 }
